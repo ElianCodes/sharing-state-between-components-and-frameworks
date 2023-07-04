@@ -5,7 +5,8 @@
     "baseUrl": ".",
     "paths": {
       "@counters/*": ["./src/components/counters/*"],
-      "@state/*": ["./src/components/state-counters/*"]
+      "@state/*": ["./src/components/state-counters/*"],
+      "@store/*": ["./src/store/*"]
     }
   }
 }

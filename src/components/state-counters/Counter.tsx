@@ -1,12 +1,13 @@
-import { createSignal } from 'solid-js';
+import { useStore } from '@nanostores/solid';
+import { countState } from '@store/CounterStore';
 
 const Counter = () => {
-  const [count, setCount] = createSignal(0);
+  const count = useStore(countState);
   return (
     <div class='flex items-center gap-8 justify-center'>
-      <button onClick={() => setCount(count() + 1)}>+</button>
+      <button onClick={() => countState.set(count() + 1)}>+</button>
       <p>Solid Count is: {count()}</p>
-      <button onClick={() => setCount(count() - 1)}>-</button>
+      <button onClick={() => countState.set(count() - 1)}>-</button>
     </div>
   );
 };

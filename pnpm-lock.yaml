@@ -17,9 +17,18 @@ dependencies:
   '@astrojs/vue':
     specifier: ^2.2.1
     version: 2.2.1(@babel/core@7.22.6)(astro@2.7.2)(vite@4.3.9)(vue@3.3.4)
+  '@nanostores/solid':
+    specifier: ^0.4.2
+    version: 0.4.2(nanostores@0.9.3)(solid-js@1.7.7)
+  '@nanostores/vue':
+    specifier: ^0.9.1
+    version: 0.9.1(nanostores@0.9.3)(vue@3.3.4)
   astro:
     specifier: ^2.7.2
     version: 2.7.2
+  nanostores:
+    specifier: ^0.9.3
+    version: 0.9.3
   solid-js:
     specifier: ^1.4.3
     version: 1.7.7
@@ -756,6 +765,31 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
+    dev: false
+
+  /@nanostores/solid@0.4.2(nanostores@0.9.3)(solid-js@1.7.7):
+    resolution: {integrity: sha512-8v32+C9KdRbnvP4x4Oiw/CtL1tZwbRxYfmFsPIY9PXevCgxSFnicG6VnLLtNAR7F0kl8Ec7OROHO34Ffv0KDzg==}
+    peerDependencies:
+      nanostores: '>=0.8.0'
+      solid-js: ^1.6.0
+    dependencies:
+      nanostores: 0.9.3
+      solid-js: 1.7.7
+    dev: false
+
+  /@nanostores/vue@0.9.1(nanostores@0.9.3)(vue@3.3.4):
+    resolution: {integrity: sha512-Yv9datKSdDcfLz20NgS7jIX/vsYffic3nymHgujj3KFBtmtgVPC6LyJora669wtj7BwmK3qGfFY5Ylby72NIXg==}
+    engines: {node: ^16.0.0 || >=18.0.0}
+    peerDependencies:
+      '@vue/devtools-api': '>=6.1.4'
+      nanostores: '>=0.8.1'
+      vue: '>=3.3.1'
+    peerDependenciesMeta:
+      '@vue/devtools-api':
+        optional: true
+    dependencies:
+      nanostores: 0.9.3
+      vue: 3.3.4
     dev: false
 
   /@nicolo-ribaudo/semver-v6@6.3.3:
@@ -2742,6 +2776,11 @@ packages:
     resolution: {integrity: sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
+    dev: false
+
+  /nanostores@0.9.3:
+    resolution: {integrity: sha512-KobZjcVyNndNrb5DAjfs0WG0lRcZu5Q1BOrfTOxokFLi25zFrWPjg+joXC6kuDqNfSt9fQwppyjUBkRPtsL+8w==}
+    engines: {node: ^16.0.0 || ^18.0.0 || >=20.0.0}
     dev: false
 
   /nlcst-to-string@3.1.1:
