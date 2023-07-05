@@ -1,0 +1,26 @@
+---
+import CounterVue from '@state/Counter.vue';
+import CounterSvelte from '@state/Counter.svelte';
+import CounterSolid from '@state/Counter';
+---
+
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body class='mx-12'>
+    <div class='flex flex-col my-16 justify-center items-center'>
+      <h1 class='text-4xl'>Example with shared State</h1>
+      <a href='/' class='underline'>to example without shared state</a>
+    </div>
+    <div class='grid grid-cols-3'>
+      <CounterVue client:load />
+      <CounterSvelte client:load />
+      <CounterSolid client:load />
+    </div>
+  </body>
+</html>
